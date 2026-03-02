@@ -1,0 +1,179 @@
+#:kivy 2.1.0
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import dp kivy.metrics.dp
+
+<NumInput>:
+    multiline: False
+    input_type: 'number'
+    font_size: dp(26)
+    halign: 'center'
+    background_color: 1, 1, 1, 1
+    foreground_color: 0, 0, 0, 1
+    cursor_color: 0.0, 0.47, 1.0, 1
+    hint_text_color: 0.7, 0.7, 0.7, 1
+    padding: [dp(8), dp(12)]
+    size_hint_x: 1
+    on_text: app.update_result()
+
+<DiffTimeRoot>:
+    orientation: 'vertical'
+    spacing: dp(16)
+    padding: [dp(24), dp(30), dp(24), dp(20)]
+
+    canvas.before:
+        Color:
+            rgba: 0.96, 0.96, 0.97, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    # ── Nagłówek ─────────────────────────────────────────────────────────
+    Label:
+        text: 'DiffTime'
+        font_size: dp(28)
+        bold: True
+        color: get_color_from_hex('#007AFF')
+        size_hint_y: None
+        height: dp(40)
+
+    Label:
+        text: 'Punkt A'
+        font_size: dp(13)
+        color: 0.5, 0.5, 0.55, 1
+        size_hint_y: None
+        height: dp(18)
+        halign: 'left'
+        text_size: self.size
+
+    # ── Wiersz 1: data + czas ────────────────────────────────────────────
+    BoxLayout:
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(6)
+
+        # Data A: DD-MM
+        BoxLayout:
+            spacing: dp(4)
+            NumInput:
+                id: d1_dd
+                hint_text: 'DD'
+            Label:
+                text: '-'
+                font_size: dp(26)
+                bold: True
+                color: 0.4, 0.4, 0.4, 1
+                size_hint_x: None
+                width: dp(14)
+            NumInput:
+                id: d1_mm
+                hint_text: 'MM'
+
+        # Odstęp
+        Widget:
+            size_hint_x: None
+            width: dp(12)
+
+        # Czas A: HH:MM
+        BoxLayout:
+            spacing: dp(4)
+            NumInput:
+                id: d1_hh
+                hint_text: 'HH'
+            Label:
+                text: ':'
+                font_size: dp(26)
+                bold: True
+                color: 0.4, 0.4, 0.4, 1
+                size_hint_x: None
+                width: dp(14)
+            NumInput:
+                id: d1_min
+                hint_text: 'MM'
+
+    # ── Punkt B ──────────────────────────────────────────────────────────
+    Label:
+        text: 'Punkt B'
+        font_size: dp(13)
+        color: 0.5, 0.5, 0.55, 1
+        size_hint_y: None
+        height: dp(18)
+        halign: 'left'
+        text_size: self.size
+
+    # ── Wiersz 2: data + czas ────────────────────────────────────────────
+    BoxLayout:
+        size_hint_y: None
+        height: dp(52)
+        spacing: dp(6)
+
+        BoxLayout:
+            spacing: dp(4)
+            NumInput:
+                id: d2_dd
+                hint_text: 'DD'
+            Label:
+                text: '-'
+                font_size: dp(26)
+                bold: True
+                color: 0.4, 0.4, 0.4, 1
+                size_hint_x: None
+                width: dp(14)
+            NumInput:
+                id: d2_mm
+                hint_text: 'MM'
+
+        Widget:
+            size_hint_x: None
+            width: dp(12)
+
+        BoxLayout:
+            spacing: dp(4)
+            NumInput:
+                id: d2_hh
+                hint_text: 'HH'
+            Label:
+                text: ':'
+                font_size: dp(26)
+                bold: True
+                color: 0.4, 0.4, 0.4, 1
+                size_hint_x: None
+                width: dp(14)
+            NumInput:
+                id: d2_min
+                hint_text: 'MM'
+
+    # ── Wynik ─────────────────────────────────────────────────────────────
+    BoxLayout:
+        size_hint_y: None
+        height: dp(90)
+        padding: dp(16)
+
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [dp(14)]
+
+        Label:
+            text: app.result_text
+            font_size: dp(40)
+            bold: True
+            color: get_color_from_hex('#007AFF')
+            halign: 'center'
+            valign: 'middle'
+
+    Widget:
+
+    # ── Przycisk Wyjdź ───────────────────────────────────────────────────
+    Button:
+        text: 'Wyjdź'
+        size_hint_y: None
+        height: dp(48)
+        background_color: get_color_from_hex('#FF3B30')
+        color: 1, 1, 1, 1
+        font_size: dp(18)
+        bold: True
+        background_normal: ''
+        on_press: app.stop()
