@@ -1,19 +1,26 @@
 ## DiffTime
-Difference of two time points
 
-Prosta aplikacja do obliczania ilości czasu pomiędzy dwoma punktami czasoprzestrzeni.
-Aplikacja uwzględnia lata przestępne, działa tylko w trakcie uruchomienia i nie zapisauje nic na urządzeniu.
+Różnica pomiędzy dwoma punktami w czasie
 
-Zastosowane rozwiązanie pozwala na dowolną kolejność wpisanych danych. Niezależnie czy zostanie wpisane najpierw data starsza, a później nowsza
-czy odwrotnie aplikacja poprawnie wyliczy czas w goodzinach i minutach pomiędzy tymi dwoma wpisami.
+DiffTime to prosta aplikacja na Androida służąca do obliczania dokładnej różnicy czasu pomiędzy dwoma momentami.
+
+Aplikacja:
+
+- poprawnie uwzględnia lata przestępne
+
+- działa wyłącznie w trakcie uruchomienia (nie zapisuje żadnych danych na urządzeniu)
+
+- przyjmuje daty w dowolnej kolejności (wcześniejsza → późniejsza lub odwrotnie)
+
+- zwraca wynik w pełnych godzinach i minutach
 
 ---
 
-## Dla kogo?
+## Zastosowanie
 
-Aplikacja powstała na potrzeby własne do wyliczania dokładnego czasu pauzy podczas pracy jako kierowca zawodowy.
+Aplikacja powstała z myślą o własnych potrzebach — do precyzyjnego wyliczania czasu przerwy podczas pracy jako kierowca zawodowy.
 
-Jednak zastosowana może być gdziekolwiek potrzeba wyliczyć dokładny czas wyrażony w pełnych godzinach oraz minutach.
+Może być jednak używana wszędzie tam, gdzie potrzebne jest dokładne obliczenie różnicy czasu wyrażonej w godzinach i minutach.
 
 ---
 
@@ -23,13 +30,13 @@ Jednak zastosowana może być gdziekolwiek potrzeba wyliczyć dokładny czas wyr
 
 ---
 
-## License
+## Licencja MIT
+Copyright (c) 2026 CodeTruckerDev (Piotr M.)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file.
+Projekt jest udostępniony na licencji MIT — szczegóły znajdują się w pliku [LICENSE](LICENSE).
 
-**Attribution appreciated:** If you use this code, a link back to this repo
-would be awesome (but not required). It helps other developers find the original
-work and supports independent creators like me.
+Podanie źródła nie jest wymagane, ale będzie mile widziane.
+Jeśli wykorzystasz ten kod, link do oryginalnego repozytorium pomoże innym odnaleźć źródło projektu i wesprze niezależnych twórców.
 
 ---
 
