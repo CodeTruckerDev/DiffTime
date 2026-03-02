@@ -19,7 +19,7 @@ Jednak zastosowana może być gdziekolwiek potrzeba wyliczyć dokładny czas wyr
 
 ## Zrzut ekranu
 
-![Screenshot przykładowego użycia]()
+![Screenshot przykładowego użycia](Screenshot.jpg)
 
 ---
 
