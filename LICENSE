@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 CodeTruckerDev
+Copyright (c) 2025 CodeTruckerDev (Piotr M.)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Attribution Request
+
+While not legally required by this license, if you use this code in your
+project, I would greatly appreciate a mention in your README or documentation
+with a link back to the original repository:
+
+https://github.com/CodeTruckerDev/Obliczacz-VAT
+
+This helps others discover the original work and supports independent developers.
+
+Thank you!
+- CodeTruckerDev
