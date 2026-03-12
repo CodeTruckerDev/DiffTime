@@ -11,6 +11,8 @@ Aplikacja:
 - przyjmuje daty w dowolnej kolejności
 - zwraca wynik w pełnych godzinach i minutach
 
+Powstała także wersja [DiffTime-cli](https://github.com/CodeTruckerDev/DiffTime-cli)
+
 ---
 
 ## Zastosowanie
